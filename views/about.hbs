@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio.about</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./CSS/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&family=Source+Sans+Pro:wght@300;900&display=swap" rel="stylesheet">
+     
+</head>
+<body>
+     <header>
+      {{>header}}
+      <div class="jumbotron jumbotron-fluid rellax animate_animated animate_fadeInLeft" data-rellax-speed="7">
+        <div class="container">
+          <div class="row mt-5">
+            <div class="col-9 col-md-6 ml-5">
+              <h1 class="header-text ">About Me</h1>
+            </div>
+            <div class="col-3 col-md-3 offset-1">
+             <a class="btn btn-default" id="btn" href="https://drive.google.com/file/d/12gAxGJ7qI_4j_tmdp4wyeb2c-hBO6LkD/view" target="_blank">Resume</a>  
+            </div>
+            
+            <p>Hi, I'm self-learner Web Developer.</p>
+            <p>Passionate about programming and want to do something meaningful for this community.</p>
+            <p>Actively looking for an opportunity.</p>
+            
+
+          </div>
+        </div>
+      </div>
+     </header>
+     <section class="about-us rellax wow fadeInRight" data-rellax-speed="5">
+          <div class="container">
+            <h2>More About Me</h2>
+            <blockquote class="blockquote text-center">
+              <p class="mt-5"><i class="fa fa-quote-left fa__quote" aria-hidden="true"></i>If you want to solve problems, you don't just solve the ones that are there, you find more and make more, go after the impossible ones. Fostering a love and obsession with problems is how you solve problems.<i class="fa fa-quote-right fa__quote" aria-hidden="true"></i></p>
+              <footer class="blockquote-footer">Michael Stevens<cite title="Source Title">(Vsauce)</cite></footer>
+            </blockquote>
+            <div class="row mt-5">
+              <div class="col-md-6 mt-3">
+                <h3>what drove me to started this journey&#63;</h3>
+                <p class="lead">Before I stumbled upon the programming I was doing meaningless things.<br> Apart from that, I believe we as a human always have a hunger for curiosity and that led me to drove into programming. Also, need to mention that one of my very good friend who helped and guided me into various programming languages. Now, I have confidence and believe in my programming skills.</p>
+              </div>
+            </div>
+            <div class="row mt-5">
+              <div class="col-md-3">
+              </div>
+              <div class="col-md-6">
+               <h3><strong>Recently Learning: <span class="badge badge-primary">ReactJS</span></strong></h3>
+               <h3><strong>Next:<span class="badge badge-danger">AngularJS</span></strong></h3>
+              </div>
+              <div class="col-md-3">
+               <img src="./images/1280px-React-icon.svg.png" class="react-logo d-none d-md-block" alt="react-logo">
+              </div>
+            </div>
+            <div class="row">
+              <h2 class="facts-about-me">Facts About Me</h2>
+              <div class="col-md-12 ">
+                <h3>I'm a Tech-Enthusiast</h3>
+                <p>Always enjoy technology-related things. Whenever I get bored, I watch especially <u>Linus Tech Tips</u> and <u>VSauce</u>. These are some of my favorite channels.</p>
+                <p>Besides that, I always think that the way we are improving so rapidly and one day, we might end up making something that might change our very own surrounding fabric.</p>
+
+              </div>
+              <div class="col-md-12 ">
+                <h3>Passionate about Programming</h3>
+                <p>Sometimes it makes me think, how a single programming language Javascript significantly changed the web development process. And this attracts me more to learn new things about Javascript.</p>
+            
+              </div>
+              <div class="col-md-12 ">
+                <h3>Love Competitive Gaming</h3>
+                <p>Love to play and watch Competitive Gaming.</p>
+              </div>
+
+            </div>
+          </div>
+     </section>
+       {{>footer}}
+
+
+     <script src="./JS/query.js"></script>
+     <script
+     src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+     crossorigin="anonymous"
+   ></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+       <script
+     src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+     integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+     crossorigin="anonymous"
+       ></script>
+   <script
+     src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+     integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+     crossorigin="anonymous"
+   ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+   <script>
+    $(function () {
+     $('[data-toggle="tooltip"]').tooltip()
+     })
+   </script>
+   <script>
+     var rellax = new Rellax('.rellax', {
+    center: false,
+    wrapper: null,
+    round: false,
+    vertical: true,
+    horizontal: false
+  });
+      var rellax1 = new Rellax('.new_rellax',{
+        speed: 1,
+        center:false,
+        wrapper: null,
+        round: false,
+        vertical: true,
+        horizontal: false
+      })
+   </script>
+</body>
+</html>

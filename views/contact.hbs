@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./CSS/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&family=Source+Sans+Pro:wght@300;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        {{>header}}
+    </header>
+         <section class="form">
+            
+            <div class="container">
+              
+              <div class="row">
+               
+                <div class="col-md-6 mt-3">
+                  <div class="mail title_rellax  " >
+                      <img class="mail_img " data-tilt id="img" src="./images/mail.png" alt="">
+                  </div>
+                   
+                </div>
+                <div class="col-md-6 mt-5">
+                  <div class="title title_rellax" data-rellax-speed="5">
+                      <h1 class="animate__animated animate_fadeInRight">Get in Touch</h1>
+                  </div>
+                    
+                         <form  id="my-form " action="https://formspree.io/f/mbjpnpdg" method="POST">
+                      <div class="form-group">
+                         <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name">
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label" for="last">Last Name</label>
+                        <input type="text" class="form-control" id="last" placeholder="Last Name">
+                      </div>
+                      <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" required id="email" placeholder="Your Email Address">
+                            
+                      </div>
+                      <div class="form-group">
+                        <label for="messages">Enter Your Message</label>
+                        <textarea class="form-control" name="message" required id="message" cols="10" rows="5"></textarea>
+                      </div>
+                      <button type="submit" class="btn" id="my-form-button" >Send</button>
+                      <p id="my-form-status" class="text-auth"></p>
+                    </form>
+                    
+                    
+                </div>
+              </div>
+            </div>
+         </section>
+      {{>footer}}
+      <script src="./JS/contact.js"></script>
+      <script src="./JS/query.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+     <script>
+       var form = document.querySelector('form');
+       var imageBackground = document.getElementById('img')
+          
+         async function handleSubmit(event) {
+          event.preventDefault();
+          var status = document.getElementById("my-form-status");
+          var data = new FormData(event.target);
+           fetch(event.target.action, {
+           method: form.method,
+           body: data,
+           headers: {
+            'Accept': 'application/json'
+             }
+           }).then(response => {
+            status.innerHTML = "Thanks for your submission!";
+            imageBackground.style.backgroundColor = "lightgreen"
+
+            form.reset()
+
+            }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+            });
+          }
+          form.addEventListener("submit", handleSubmit)
+     </script>
+      <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"
+      ></script>
+    <script
+     src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+     integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+     crossorigin="anonymous"
+       ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+   <script
+     src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+     integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+     crossorigin="anonymous"
+   ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+      var rellax = new Rellax('.rellax', {
+    center: false,
+    wrapper: null,
+    round: false,
+    vertical: true,
+    horizontal: false
+  });
+      var rellax1 = new Rellax('.title_rellax',{
+        speed: 5,
+        center:false,
+        wrapper: null,
+        round: false,
+        vertical: true,
+        horizontal: false
+      })
+
+    </script>
+</body>
+</html>
